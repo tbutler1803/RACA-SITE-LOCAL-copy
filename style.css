@@ -1,7 +1,4 @@
 
-/* Import Gatsby Font */
-@import url('https://fonts.googleapis.com/css2?family=Gatsby:wght@300;400;600;700&display=swap');
-
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -16,7 +13,7 @@ html {
 }
 
 body {
-    font-family: 'Gatsby', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #ffffff;
@@ -30,7 +27,7 @@ body {
 
 /* Typography */
 h1, h2, h3, h4 {
-    font-family: 'Gatsby', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 600;
 }
 
@@ -628,7 +625,7 @@ textarea:focus,
     border-radius: 8px;
     font-size: 1rem;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    font-family: 'Gatsby', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .form-group input:focus,
