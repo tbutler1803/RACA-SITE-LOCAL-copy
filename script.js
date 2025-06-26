@@ -84,6 +84,21 @@ document.addEventListener('DOMContentLoaded', function() {
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
+
+    // Add keyboard navigation for gallery items
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        item.setAttribute('tabindex', '0');
+        item.setAttribute('role', 'button');
+        item.setAttribute('aria-label', 'View gallery image details');
+        
+        item.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                // Trigger hover effect on keyboard activation
+                this.classList.toggle('keyboard-active');
+            }
+        });
+    });
 });
 
 // Contact form functionality
@@ -92,14 +107,50 @@ function handleContactForm(event) {
     
     // Get form data
     const formData = new FormData(event.target);
-    const firstName = formData.get('firstName');
-    const lastName = formData.get('lastName');
-    const email = formData.get('email');
+    const firstName = formData.get('firstName').trim();
+    const lastName = formData.get('lastName').trim();
+    const email = formData.get('email').trim();
     const subject = formData.get('subject');
+    const message = formData.get('message').trim();
     
-    // Basic validation
-    if (!firstName || !lastName || !email || !subject) {
-        alert('Please fill in all required fields.');
+    // Clear previous error states
+    document.querySelectorAll('.form-group input, .form-group select, .form-group textarea').forEach(field => {
+        field.style.borderColor = '#e2e8f0';
+    });
+    
+    // Validation
+    const errors = [];
+    
+    if (!firstName) {
+        errors.push('First name is required');
+        document.getElementById('firstName').style.borderColor = '#e53e3e';
+    }
+    
+    if (!lastName) {
+        errors.push('Last name is required');
+        document.getElementById('lastName').style.borderColor = '#e53e3e';
+    }
+    
+    if (!email) {
+        errors.push('Email is required');
+        document.getElementById('email').style.borderColor = '#e53e3e';
+    } else if (!isValidEmail(email)) {
+        errors.push('Please enter a valid email address');
+        document.getElementById('email').style.borderColor = '#e53e3e';
+    }
+    
+    if (!subject) {
+        errors.push('Subject is required');
+        document.getElementById('subject').style.borderColor = '#e53e3e';
+    }
+    
+    if (!message) {
+        errors.push('Message is required');
+        document.getElementById('message').style.borderColor = '#e53e3e';
+    }
+    
+    if (errors.length > 0) {
+        alert('Please correct the following errors:\n• ' + errors.join('\n• '));
         return;
     }
     
@@ -111,6 +162,12 @@ function handleContactForm(event) {
     
     // In a real implementation, you would send this data to your server
     console.log('Contact form submitted:', Object.fromEntries(formData));
+}
+
+// Email validation helper
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
 }
 
 // Newsletter subscription (if needed)
