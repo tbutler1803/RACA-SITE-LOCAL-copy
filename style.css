@@ -76,14 +76,14 @@ h3 {
 }
 
 .btn-secondary {
-    background-color: transparent;
-    color: #1a365d;
-    border: 2px solid #1a365d;
+    background-color: #1a365d;
+    color: #ffffff;
+    border: 2px solid #ffffff;
 }
 
 .btn-secondary:hover {
-    background-color: #1a365d;
-    color: white;
+    background-color: #ffffff;
+    color: #1a365d;
 }
 
 .btn-large {
