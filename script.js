@@ -8,6 +8,31 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenuToggle.addEventListener('click', function() {
             navLinks.classList.toggle('active');
             mobileMenuToggle.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (navLinks.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileMenuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Close menu on window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                navLinks.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         });
     }
 
@@ -99,6 +124,44 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // Mobile-specific optimizations
+    if ('ontouchstart' in window) {
+        // Add touch feedback for mobile devices
+        document.querySelectorAll('.btn-primary, .btn-secondary').forEach(button => {
+            button.addEventListener('touchstart', function() {
+                this.style.opacity = '0.8';
+            });
+            
+            button.addEventListener('touchend', function() {
+                this.style.opacity = '';
+            });
+        });
+        
+        // Prevent double-tap zoom on buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('touchend', function(e) {
+                e.preventDefault();
+                this.click();
+            });
+        });
+    }
+    
+    // Optimize images for mobile
+    function optimizeImagesForMobile() {
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+            if (!img.complete) {
+                img.addEventListener('load', function() {
+                    this.style.opacity = '1';
+                });
+                img.style.opacity = '0';
+                img.style.transition = 'opacity 0.3s ease';
+            }
+        });
+    }
+    
+    optimizeImagesForMobile();
 });
 
 // Contact form functionality
