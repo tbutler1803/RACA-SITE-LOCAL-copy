@@ -1,16 +1,202 @@
+
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Automobile Club of Australia | Australia's First Automobile Club</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  Hello world
-  <script src="script.js"></script>
-</body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <img src="attached_assets/company_logo_1750914470639.png" alt="RACA Logo" class="logo">
+            </div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#benefits">Benefits</a>
+                <a href="#events">Events</a>
+                <a href="#contact">Contact</a>
+                <button class="btn-primary">Book a Tour</button>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to the<br><span class="highlight">Royal Automobile Club of Australia</span></h1>
+            <p class="hero-subtitle">Australia's First Automobile Club - Founded in 1903</p>
+            <p class="hero-description">Experience the perfect blend of heritage, luxury, and motoring passion in our historic Macquarie Street location.</p>
+            <div class="hero-actions">
+                <button class="btn-primary btn-large">Book a Tour</button>
+                <button class="btn-secondary btn-large">Learn More</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Australia's First Automobile Club</h2>
+                <p>Founded in 1903, our historic Macquarie Street location is a testament to our rich heritage.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Our Heritage</h3>
+                    <p>Motoring is the driving force behind everything we do, connecting motoring enthusiasts to a network of thought-provokers and industry leaders.</p>
+                    <p>Our service is well-oiled. Enjoy seamless experiences executed with precision. From valet parking to private corporate events, our expert team is on hand to fine-tune every detail.</p>
+                </div>
+                <div class="about-features">
+                    <div class="feature">
+                        <h4>Heritage & Tradition</h4>
+                        <p>Over 120 years of automotive excellence and club traditions</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Premium Location</h4>
+                        <p>Historic Macquarie Street venue with harbour views</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Expert Service</h4>
+                        <p>Seamless experiences from valet parking to corporate events</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Membership Benefits</h2>
+                <p>Discover the exclusive advantages of RACA membership</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏛️</div>
+                    <h3>Harbour Dining Room</h3>
+                    <p>Our menu celebrates classic dishes, finely tuned with modern finesse. Set against the breathtaking backdrop of Sydney Harbour.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚗</div>
+                    <h3>Motoring Events</h3>
+                    <p>Our curated events link motoring enthusiasts with a network of thought leaders and industry innovators.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌐</div>
+                    <h3>Reciprocal Clubs</h3>
+                    <p>Rev up your global network with exclusive member access to over 200 reciprocal clubs worldwide.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏨</div>
+                    <h3>Accommodation</h3>
+                    <p>Spend the night in our exclusive accommodation, just 100m from Circular Quay.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💼</div>
+                    <h3>Business Suite</h3>
+                    <p>Catch up on work in our business suite or rejuvenate at our wellness centre.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Wellness Centre</h3>
+                    <p>The RACA is fully equipped to meet every need with premium wellness facilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Preview -->
+    <section id="events" class="events">
+        <div class="container">
+            <div class="section-header">
+                <h2>Upcoming Events</h2>
+                <p>Join us for exclusive motoring events and social gatherings</p>
+            </div>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-badge sold-out">Sold Out</div>
+                    <h3>RACA Gala Dinner</h3>
+                    <p class="event-date">09.08.2025</p>
+                    <p>An unforgettable evening of sophistication and celebration at the Royal Automobile Club of Australia's 2025 Gala Dinner.</p>
+                </div>
+                <div class="event-card">
+                    <h3>Bastille Day Dinner</h3>
+                    <p class="event-date">12.07.25</p>
+                    <p>Join us for a celebration of timeless flavours, expertly paired wines, and a homage to the foundations of haute cuisine.</p>
+                    <button class="btn-secondary">Read More</button>
+                </div>
+                <div class="event-card">
+                    <h3>Bangers and Mash Dinner</h3>
+                    <p class="event-date">27.06.2025</p>
+                    <p>Rev up your evening! The Motoring Committee invites you to catch up with fellow enthusiasts over a hearty serving.</p>
+                    <button class="btn-secondary">Read More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Experience the Royal Automobile Club</h2>
+                <p>Discover our heritage, luxury amenities, and exclusive member benefits. Book a tour or enquire about membership today.</p>
+                <div class="cta-actions">
+                    <button class="btn-primary btn-large">Book a Tour</button>
+                    <button class="btn-secondary btn-large">Enquire Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="attached_assets/company_logo_1750914470639.png" alt="RACA Logo" class="footer-logo">
+                    <p>The Club's location offers members spectacular views over Sydney Harbour and is just a short walk from the iconic Sydney Opera House.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#benefits">Membership</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>89 Macquarie Street,<br>Sydney NSW 2000,<br>Australia</p>
+                    <p>Phone: +61 (02) 8273 2300</p>
+                    <p>Email: reception@raca.com.au</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Open Hours</h4>
+                    <p>Club Reception is accessible 24 hours,<br>7 days a week.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Royal Automobile Club of Australia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
