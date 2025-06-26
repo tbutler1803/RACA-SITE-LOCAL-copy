@@ -86,11 +86,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Contact form functionality (if needed)
+// Contact form functionality
 function handleContactForm(event) {
     event.preventDefault();
-    // Add contact form handling logic here
-    alert('Thank you for your message! We will get back to you soon.');
+    
+    // Get form data
+    const formData = new FormData(event.target);
+    const firstName = formData.get('firstName');
+    const lastName = formData.get('lastName');
+    const email = formData.get('email');
+    const subject = formData.get('subject');
+    
+    // Basic validation
+    if (!firstName || !lastName || !email || !subject) {
+        alert('Please fill in all required fields.');
+        return;
+    }
+    
+    // Show success message
+    alert(`Thank you ${firstName}! Your message has been received. We will contact you at ${email} within 24 hours.`);
+    
+    // Reset form
+    event.target.reset();
+    
+    // In a real implementation, you would send this data to your server
+    console.log('Contact form submitted:', Object.fromEntries(formData));
 }
 
 // Newsletter subscription (if needed)
