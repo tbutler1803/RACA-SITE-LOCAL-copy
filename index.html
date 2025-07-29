@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,24 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Royal Automobile Club of Australia | Australia's First Automobile Club</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="attached_assets/Screenshot%202025-06-29%20at%206.44.00%E2%80%AFPM.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="attached_assets/Screenshot%202025-06-29%20at%206.44.00%E2%80%AFPM.png">
+    <link rel="manifest" href="images/site.webmanifest">
+
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'qpc0ear',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+
 </head>
+    
+    
 <body>
-    <!-- Header -->
     <header class="header">
         <nav class="nav">
-            <div class="nav-brand">
-                <img src="attached_assets/company_logo_1750914470639.png" alt="RACA Logo" class="logo">
+            <div class="nav-left">
+                <a href="https://members.raca.com.au/web/pages/login" class="btn-login">Member Login</a>
+                <div class="nav-brand">
+                    <a href="index.html"><img src="attached_assets/company_logo_1750914470639.png" alt="RACA Logo" class="logo"></a>
+                </div>
             </div>
+            
             <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#benefits">Membership</a>
-                <a href="#events">Events</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#contact">Contact</a>
-                <button class="btn-primary">Book a Tour</button>
+                <a href="index.html#about">About</a>
+                <a href="board-of-directors.html">Our Board</a>
+                <a href="index.html#events">Events</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="reciprocal-clubs.html">Reciprocal Clubs</a>
+                <a href="index.html#contact">Contact</a>
+                <button class="btn-primary modal-trigger">Book a Tour</button>
+                <a href="https://membership.raca.com.au/" target="_blank" class="btn-primary">Join Now</a>
+                <a href="https://members.raca.com.au/web/pages/login" class="btn-login">Member Login</a>
             </div>
-            <div class="mobile-menu-toggle">
+
+            <div class="mobile-menu-toggle" role="button" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -31,366 +55,341 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome to the<br><span class="highlight">Royal Automobile Club of Australia</span></h1>
-            <p class="hero-subtitle">Australia's First Automobile Club - Founded in 1903</p>
-            <p class="hero-description">Experience the perfect blend of heritage, luxury, and motoring passion in our historic Macquarie Street location.</p>
-            <div class="hero-actions">
-                <button class="btn-primary btn-large">Book a Tour</button>
-                <button class="btn-secondary btn-large">Learn More</button>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>The royal automobile club of australia</h1>
+                <p class="hero-subtitle">Where heritage meets hospitality in the heart of Sydney.</p>
+                <p class="hero-description">Step into a world of tradition, excellence, and opportunity, right at Circular Quay.</p>
+                <br>
+                <div class="hero-actions">
+                    <a href="https://membership.raca.com.au" target="_blank" class="btn-primary btn-large">Join Now</a>
+                    <button class="btn-secondary btn-large modal-trigger">Book a Club Tour</button>
+                </div>
             </div>
-        </div>
-        <div class="hero-image">
-            <div class="hero-overlay"></div>
-        </div>
-    </section>
+            <div class="hero-video-wrapper">
+                 <video autoplay loop muted playsinline class="hero-video">
+                    <source src="attached_assets/SloMo.mp4" type="video/mp4">
+                    <source src="attached_assets/SloMo.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>Australia's First Automobile Club</h2>
-                <p>Founded in 1903, our historic Macquarie Street location is a testament to our rich heritage.</p>
-            </div>
-            <div class="about-grid">
-                <div class="about-text">
-                    <h3>Our Heritage</h3>
-                    <p>Motoring is the driving force behind everything we do, connecting motoring enthusiasts to a network of thought-provokers and industry leaders.</p>
-                    <p>Our service is well-oiled. Enjoy seamless experiences executed with precision. From valet parking to private corporate events, our expert team is on hand to fine-tune every detail.</p>
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Driving the Future, Honouring the Past</h2>
+                    <p>Founded in 1903, RACA is Australia's first automobile club and a symbol of motoring prestige.</p>
                 </div>
-                <div class="about-features">
-                    <div class="feature">
-                        <h4>Heritage & Tradition</h4>
-                        <p>Over 120 years of automotive excellence and club traditions</p>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h3>Innovation is in our DNA</h3>
+                        <p class="about-intro">Welcome to the Royal Automobile Club of Australia, where innovation takes the driver's seat. We don't just cruise on legacy; we strive for progression. Our historic Macquarie Street location is a testament to our rich heritage, a true landmark in motoring excellence.</p>
+                        <br>
+                        <p>Our service is well-oiled. Enjoy seamless experiences executed with precision. From valet parking to private corporate events, our expert team is on hand to fine-tune every detail. Our members are our fuel, and we can't wait to start the journey with you.</p>
                     </div>
-                    <div class="feature">
-                        <h4>Premium Location</h4>
-                        <p>Historic Macquarie Street venue with harbour views</p>
-                    </div>
-                    <div class="feature">
-                        <h4>Expert Service</h4>
-                        <p>Seamless experiences from valet parking to corporate events</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section id="benefits" class="benefits">
-        <div class="container">
-            <div class="section-header">
-                <h2>Membership Benefits</h2>
-                <p>Discover the exclusive advantages of RACA membership</p>
-            </div>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
-                    </div>
-                    <h3>Harbour Dining Room</h3>
-                    <p>Our menu celebrates classic dishes, finely tuned with modern finesse. Set against the breathtaking backdrop of Sydney Harbour.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11C5.84 5 5.28 5.42 5.08 6.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
-                        </svg>
-                    </div>
-                    <h3>Motoring Events</h3>
-                    <p>Our curated events link motoring enthusiasts with a network of thought leaders and industry innovators.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                        </svg>
-                    </div>
-                    <h3>Reciprocal Clubs</h3>
-                    <p>Rev up your global network with exclusive member access to over 200 reciprocal clubs worldwide.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V6H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/>
-                        </svg>
-                    </div>
-                    <h3>Accommodation</h3>
-                    <p>Spend the night in our exclusive accommodation, just 100m from Circular Quay.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M14 6V4h-4v2h4zM4 8v11h16V8H4zm16-2c1.11 0 2 .89 2 2v11c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2l.01-11c0-1.11.88-2 1.99-2h4V4c0-1.11.89-2 2-2h4c1.11 0 2 .89 2 2v2h4z"/>
-                        </svg>
-                    </div>
-                    <h3>Business Suite</h3>
-                    <p>Catch up on work in our business suite or rejuvenate at our wellness centre.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M17 12c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm1.65 7.35L16.5 17.2V14h1v2.79l1.85 1.85-.7.71zM18 3h-3.18C14.4 1.84 13.3 1 12 1s-2.4.84-2.82 2H6c-1.1 0-2 .9-2 2v15c0 1.1.9 2 2 2h6.11c-.59-.57-1.07-1.25-1.42-2H6V5h2v3h8V5h2v5.08c.71.1 1.38.31 2 .6V5c0-1.1-.9-2-2-2zm-6 2c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/>
-                        </svg>
-                    </div>
-                    <h3>Wellness Centre</h3>
-                    <p>The RACA is fully equipped to meet every need with premium wellness facilities.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Events Preview -->
-    <section id="events" class="events">
-        <div class="container">
-            <div class="section-header">
-                <h2>Upcoming Events</h2>
-                <p>Join us for exclusive motoring events and social gatherings</p>
-            </div>
-            <div class="events-grid">
-                <div class="event-card">
-                    <div class="event-badge sold-out">Sold Out</div>
-                    <h3>RACA Gala Dinner</h3>
-                    <p class="event-date">09.08.2025</p>
-                    <p>An unforgettable evening of sophistication and celebration at the Royal Automobile Club of Australia's 2025 Gala Dinner.</p>
-                </div>
-                <div class="event-card">
-                    <h3>Bastille Day Dinner</h3>
-                    <p class="event-date">12.07.25</p>
-                    <p>Join us for a celebration of timeless flavours, expertly paired wines, and a homage to the foundations of haute cuisine.</p>
-                    <button class="btn-secondary">Read More</button>
-                </div>
-                <div class="event-card">
-                    <h3>Bangers and Mash Dinner</h3>
-                    <p class="event-date">27.06.2025</p>
-                    <p>Rev up your evening! The Motoring Committee invites you to catch up with fellow enthusiasts over a hearty serving.</p>
-                    <button class="btn-secondary">Read More</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <div class="section-header">
-                <h2>Experience Our Historic Club</h2>
-                <p>Take a visual journey through the Royal Automobile Club's elegant spaces and vibrant community</p>
-            </div>
-        </div>
-        <div class="gallery-carousel">
-            <div class="gallery-track">
-                <div class="gallery-item">
-                    <img src="attached_assets/billiards_1750917074638.webp" alt="Billiards Room" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Recreation Room</h3>
-                        <p>Classic billiards tables in our elegant recreation space</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="attached_assets/architecture_1750917074639.webp" alt="Grand Architecture" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Grand Architecture</h3>
-                        <p>Stunning architectural details and heritage craftsmanship</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="attached_assets/club heritage_1750917074640.webp" alt="Heritage Gallery" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Heritage Gallery</h3>
-                        <p>Our collection of historical artifacts and artworks</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="attached_assets/inside club mainroom_1750916126660.webp" alt="Main Lounge" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Main Lounge</h3>
-                        <p>The heart of our club with vintage motorcycles on display</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="attached_assets/front of club2_1750917074642.webp" alt="Club Exterior" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Historic Façade</h3>
-                        <p>Our distinguished Macquarie Street entrance</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="attached_assets/bridge view_1750917074641.webp" alt="Harbour Bridge View" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Harbour Views</h3>
-                        <p>Breathtaking views of Sydney Harbour Bridge from our windows</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="attached_assets/dining 4_1750917074641.webp" alt="Whisky Tasting" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Premium Tastings</h3>
-                        <p>Exclusive whisky tastings and member events</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="attached_assets/views_1750917074642.webp" alt="Terrace Views" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Outdoor Terrace</h3>
-                        <p>Panoramic harbour views from our exclusive terrace</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="attached_assets/stairwell2_1750917074643.webp" alt="Grand Staircase" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Grand Staircase</h3>
-                        <p>Exquisite heritage staircase with ornate carpet detailing</p>
-                    </div>
-                </div>
-                <!-- Duplicate images for seamless loop -->
-                <div class="gallery-item">
-                    <img src="attached_assets/billiards_1750917074638.webp" alt="Billiards Room" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Recreation Room</h3>
-                        <p>Classic billiards tables in our elegant recreation space</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="attached_assets/architecture_1750917074639.webp" alt="Grand Architecture" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Grand Architecture</h3>
-                        <p>Stunning architectural details and heritage craftsmanship</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="attached_assets/club heritage_1750917074640.webp" alt="Heritage Gallery" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Heritage Gallery</h3>
-                        <p>Our collection of historical artifacts and artworks</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Contact Us</h2>
-                <p>Get in touch with the Royal Automobile Club of Australia. We're here to assist with tours, membership enquiries, and event bookings.</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" width="24" height="24" fill="#d4a574">
-                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                            </svg>
+                    <div class="about-features">
+                        <div class="feature">
+                            <h4>Heritage & Prestige</h4>
+                            <p>Over 120 years of automotive excellence and club traditions.</p>
                         </div>
-                        <h3>Address</h3>
-                        <p>89 Macquarie Street<br>Sydney NSW 2000<br>Australia</p>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" width="24" height="24" fill="#d4a574">
-                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                            </svg>
+                        <div class="feature">
+                            <h4>Premium Location</h4>
+                            <p>Historic Macquarie Street clubhouse with iconic harbour views.</p>
                         </div>
-                        <h3>Phone</h3>
-                        <p>+61 (02) 8273 2300</p>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" width="24" height="24" fill="#d4a574">
-                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
+                        <div class="feature">
+                            <h4>Progressive Spirit</h4>
+                            <p>Connecting motoring enthusiasts with industry leaders and emerging tech.</p>
                         </div>
-                        <h3>Email</h3>
-                        <p>reception@raca.com.au</p>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" width="24" height="24" fill="#d4a574">
-                                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
-                            </svg>
-                        </div>
-                        <h3>Hours</h3>
-                        <p>Club Reception is accessible<br>24 hours, 7 days a week</p>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm" onsubmit="handleContactForm(event)">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName">First Name *</label>
-                                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="sunburst-divider dark"></div>
+        </section>
+
+        <section class="image-divider-grid">
+            <div class="divider-image-item" style="background-image: url('attached_assets/billiards_1750916126659.webp');" aria-label="RACA Billiards Room"></div>
+            <div class="divider-image-item" style="background-image: url('attached_assets/inside%20club%20mainroom_1750916126660.webp');" aria-label="Grand architecture of the RACA club interior"></div>
+            <div class="divider-image-item" style="background-image: url('attached_assets/chef1.png');" aria-label="Heritage gallery display at RACA"></div>
+            <div class="divider-image-item" style="background-image: url('attached_assets/architecture_1750917074639.webp');" aria-label="RACA Chef"></div>
+        </section>
+
+        <section id="benefits" class="benefits">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Join The Royal Automobile Club of Australia?</h2>
+                    <p>Your all-access pass to life's finer things, with a member price tag.</p>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <img src="images/DSC_1633.jpg" alt="A lively social event at the RACA" class="benefit-card-img">
+                        <div class="benefit-card-content">
+                            <h3>An Extraordinary Social Calendar</h3>
+                            <p>Wine tastings. Car shows. Race day luncheons. Black-tie galas. Your social life just levelled up.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <img src="images/DSC_1688.jpg" alt="Professionals networking in a sophisticated setting" class="benefit-card-img">
+                        <div class="benefit-card-content">
+                            <h3>Your New Power Network</h3>
+                            <p>CEOs, creatives, diplomats, deal-makers—all under one roof. This is networking that feels like home.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <img src="images/pexels-junnoet-235298.jpg" alt="The front of the RACA building with valet service" class="benefit-card-img">
+                        <div class="benefit-card-content">
+                            <h3>Valet Parking in Circular Quay</h3>
+                            <p>Own a parking spot in the heart of Circular Quay. Pull up, step out, and let us handle the rest.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <img src="attached_assets/plane.jpg" alt="A guest room in one of the reciprocal clubs" class="benefit-card-img">
+                        <div class="benefit-card-content">
+                            <h3>Access 200+ Partner Clubs Globally</h3>
+                            <p>Paris. New York. Tokyo. Singapore. With over 200 reciprocal clubs, your RACA membership travels as well as you do.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <img src="attached_assets/king.png" alt="An elegant and unique boutique accommodation room" class="benefit-card-img">
+                        <div class="benefit-card-content">
+                            <h3>Boutique Accommodation</h3>
+                            <p>Elegant guest rooms just steps from Sydney Harbour. Perfect for members flying in, staying out, or hosting guests.</p>
+                        </div>
+                    </div>
+                     <div class="benefit-card">
+                        <img src="attached_assets/pexels-pat-saengcharoen-774865114-31726430.jpg" alt="View of Circular Quay from the RACA building" class="benefit-card-img">
+                        <div class="benefit-card-content">
+                            <h3>Unbeatable City Location</h3>
+                            <p>Sitting on Sydney’s ultimate connection point – train, tram, bus, and ferry all converge at Circular Quay.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <img src="images/DSC_1704.jpg" alt="A glass of red wine being poured" class="benefit-card-img">
+                        <div class="benefit-card-content">
+                            <h3>Member-only Perks and VIP Rates</h3>
+                            <p>Discounted dining. Venue hire. Exclusive partner offers. Consider it your key to life's finer things.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sunburst-divider"></div>
+        </section>
+
+        <section class="image-divider-grid">
+            <div class="divider-image-item" style="background-image: url('images/DSC_1653-Enhanced-NR.jpg');" aria-label="Members enjoying a conversation in a lounge"></div>
+            <div class="divider-image-item" style="background-image: url('images/DSC_1684.jpg');" aria-label="A display of fine wines and spirits at the bar"></div>
+            <div class="divider-image-item" style="background-image: url('images/DSC_1694.jpg');" aria-label="A framed piece of art on a wall inside the club"></div>
+            <div class="divider-image-item" style="background-image: url('images/DSC_1708.jpg');" aria-label="A classic car on display"></div>
+        </section>
+
+        <section id="events" class="events">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Upcoming Events</h2>
+                    <p>Fuel your passion at our exclusive motoring events and social gatherings.</p>
+                </div>
+                <div class="events-grid">
+        
+                    <div class="event-item">
+                        <a href="#contact" class="event-card" style="background-image: url('images/events1.png');">
+                            <div class="event-card-content">
+                                <h3>Dunbar Luncheon</h3>
+                                <p class="event-date">19.08.2025</p>
                             </div>
-                            <div class="form-group">
-                                <label for="lastName">Last Name *</label>
-                                <input type="text" id="lastName" name="lastName" required>
+                        </a>
+                    </div>
+        
+                    <div class="event-item">
+                        <a href="#contact" class="event-card" style="background-image: url('images/events2.png');">
+                            <div class="event-card-content">
+                                <h3>Social Snooker Night</h3>
+                                <p class="event-date">30.07.2025</p>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <div class="event-item">
+                        <a href="#contact" class="event-card" style="background-image: url('images/events3.png');">
+                            <div class="event-card-content">
+                                <h3>Inter Club Tournament KGC vs. Tatts</h3>
+                                <p class="event-date">05.08.2025</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="event-item">
+                        <a href="#contact" class="event-card" style="background-image: url('images/events4.png');">
+                            <div class="event-card-content">
+                                <h3>Madame X</h3>
+                                <p class="event-date">30.07.2025</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="event-item">
+                        <a href="#contact" class="event-card" style="background-image: url('images/events1.png');">
+                            <div class="event-card-content">
+                                <h3>Madame X</h3>
+                                <p class="event-date">30.07.2025</p>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <div class="event-item">
+                        <a href="#contact" class="event-card" style="background-image: url('images/events4.png');">
+                            <div class="event-card-content">
+                                <h3>Motoring Committee Bangers & Mash</h3>
+                                <p class="event-date">25.08.2025</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="image-divider-grid">
+             <div class="divider-image-item" style="background-image: url('images/DSC_1404.jpg');" aria-label="Exclusive whisky tasting event at RACA"></div>
+            <div class="divider-image-item" style="background-image: url('images/DSC_1304.jpg');" aria-label="Panoramic harbour views from the club's outdoor terrace"></div>
+            <div class="divider-image-item" style="background-image: url('images/DSC_1351.jpg');" aria-label="View of the Sydney Harbour Bridge from the RACA club"></div>
+            <div class="divider-image-item" style="background-image: url('images/DSC_1307.jpg');" aria-label="RACA Painting"></div>
+        </section>
+
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                     <h2>Get in Touch</h2>
+                    <p>We're here to assist with tours, membership enquiries, and event bookings. Let's get you on the road.</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Address</h3>
+                                <p>89 Macquarie Street<br>Sydney NSW 2000<br>Australia</p>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+61 (02) 8273 2300</p>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Email</h3>
+                                <p>reception@raca.com.au</p>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="subject">Subject *</label>
-                            <select id="subject" name="subject" required>
-                                <option value="">Please select...</option>
-                                <option value="tour">Book a Tour</option>
-                                <option value="membership">Membership Enquiry</option>
-                                <option value="events">Event Booking</option>
-                                <option value="dining">Dining Reservation</option>
-                                <option value="other">Other</option>
-                            </select>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                    <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Hours</h3>
+                                <p>Club Reception is accessible<br>24 hours, 7 days a week</p>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Please provide details about your enquiry..."></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary btn-large">Send Message</button>
-                    </form>
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <form id="contactForm" action="https://formsubmit.co/reception@raca.com.au" method="POST">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Please provide details about your enquiry..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary btn-large">Send Message</button>
+                            
+                            <input type="hidden" name="_next" value="thank-you.html">
+                            <input type="hidden" name="_subject" value="New Enquiry from RACA Website">
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Experience the Royal Automobile Club</h2>
-                <p>Discover our heritage, luxury amenities, and exclusive member benefits. Book a tour or enquire about membership today.</p>
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Get in the Driver's Seat</h2>
+                    <p>With heritage, hospitality, and connection at your fingertips, membership isn’t just access—it’s belonging. Start your journey with us today.</p>
+                </div>
                 <div class="cta-actions">
-                    <button class="btn-primary btn-large">Book a Tour</button>
-                    <button class="btn-secondary btn-large">Enquire Now</button>
+                     <a href="https://membership.raca.com.au" target="_blank" class="btn-primary btn-large">Join Now</a>
+                     <button class="btn-secondary btn-large modal-trigger">Book a Club Tour</button>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
+                <div class="footer-section footer-section-brand">
                     <img src="attached_assets/company_logo_1750914470639.png" alt="RACA Logo" class="footer-logo">
                     <p>The Club's location offers members spectacular views over Sydney Harbour and is just a short walk from the iconic Sydney Opera House.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/RACAustralia" target="_blank" class="social-icon" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg>
+                        </a>
+                        <a href="https://au.linkedin.com/company/royal-automobile-club-of-australia" target="_blank" class="social-icon" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.302 0-1.853.727-2.169 1.216h.015V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/racaustralia/" target="_blank" class="social-icon" aria-label="Instagram">
+                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.2,5.2 0,0 1,16.2 22H7.8A5.2,5.2 0,0 1,2 16.2V7.8A5.2,5.2 0,0 1,7.8 2M7.6,4A3.6,3.6 0,0 0,4 7.6V16.4A3.6,3.6 0,0 0,7.6 20H16.4A3.6,3.6 0,0 0,20 16.4V7.6A3.6,3.6 0,0 0,16.4 4H7.6M12,7A5,5 0,1 1,7 12A5,5 0,0 1,12 7M12,9A3,3 0,1 0,15 12A3,3 0,0 0,12 9M16.8,4.2A1.2,1.2 0,1 1,15.6 5.4A1.2,1.2 0,0 1,16.8 4.2Z" /></svg>
+                        </a>
+                    </div>
+                    <div class="footer-buttons">
+                        <a href="Privacy%20Policy%20of%20The%20RACA%20(1).pdf" class="btn-footer" target="_blank">Privacy Policy</a>
+                        <a href="Club%20Policy30.04.2025-2.pdf" class="btn-footer" target="_blank">Club Guidelines</a>
+                    </div>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#benefits">Membership</a></li>
-                        <li><a href="#events">Events</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="board-of-directors.html">Our Board</a></li>
+                        <li><a href="index.html#events">Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="reciprocal-clubs.html">Reciprocal Clubs</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="https://members.raca.com.au/web/pages/login">Member Login</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -410,6 +409,62 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-info-panel">
+                <div class="modal-header">
+                    <h2>Book a<br>Club Tour</h2>
+                    <p>We're ready to show you around. Fill out the form and we'll be in touch to arrange your private tour.</p>
+                </div>
+                <div class="modal-contact-info">
+                    <div class="modal-contact-item">
+                        <h3>Address</h3>
+                        <p>89 Macquarie Street<br>Sydney NSW 2000, Australia</p>
+                    </div>
+                    <div class="modal-contact-item">
+                        <h3>Contact</h3>
+                        <p>+61 (02) 8273 2300<br>reception@raca.com.au</p>
+                    </div>
+                    <div class="modal-contact-item">
+                        <h3>Hours</h3>
+                        <p>Club Reception is accessible 24 hours, 7 days a week</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-form-panel">
+                 <div class="modal-header">
+                    <h2>Book a Club Tour</h2>
+                    <p>We're ready to show you around. Fill out the form and we'll be in touch to arrange your private tour.</p>
+                </div>
+                <form id="modalContactForm" action="https://formsubmit.co/reception@raca.com.au" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="modalFirstName">First Name *</label>
+                            <input type="text" id="modalFirstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="modalLastName">Last Name *</label>
+                            <input type="text" id="modalLastName" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="modalEmail">Email *</label>
+                        <input type="email" id="modalEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="modalMessage">Message *</label>
+                        <textarea id="modalMessage" name="message" rows="5" required placeholder="Let us know your preferred tour times or any questions you have..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary btn-large">Request Tour</button>
+
+                    <input type="hidden" name="_next" value="thank-you.html">
+                    <input type="hidden" name="_subject" value="New Tour Request from RACA Website (Modal)">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
 </body>
 </html>

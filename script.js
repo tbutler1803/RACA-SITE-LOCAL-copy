@@ -1,240 +1,156 @@
-
-// Mobile menu toggle
 document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    
-    if (mobileMenuToggle && navLinks) {
-        mobileMenuToggle.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            mobileMenuToggle.classList.toggle('active');
-            
-            // Prevent body scroll when menu is open
-            if (navLinks.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
+    // Header scroll effect
+    const header = document.querySelector('.header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
             } else {
-                document.body.style.overflow = '';
-            }
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!mobileMenuToggle.contains(e.target) && !navLinks.contains(e.target)) {
-                navLinks.classList.remove('active');
-                mobileMenuToggle.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        });
-        
-        // Close menu on window resize
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-                navLinks.classList.remove('active');
-                mobileMenuToggle.classList.remove('active');
-                document.body.style.overflow = '';
+                header.classList.remove('scrolled');
             }
         });
     }
 
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+    // Mobile menu toggle functionality
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (mobileMenuToggle && navLinks) {
+        mobileMenuToggle.addEventListener('click', function() {
+            const isActive = mobileMenuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            // Prevent body scroll when mobile menu is open
+            document.body.style.overflow = isActive ? 'hidden' : '';
+        });
+
+        // Close mobile menu when a link is clicked
+        navLinks.querySelectorAll('a, button').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    mobileMenuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    }
+    
+    // Modal functionality
+    const modal = document.getElementById('contactModal');
+    const modalTriggers = document.querySelectorAll('.modal-trigger');
+    const closeButton = document.querySelector('.close-button');
+
+    function openModal() {
+        if (modal) {
+            modal.style.display = 'flex';
+            // Trigger fade-in animations
+            modal.classList.remove('fade-out');
+            modal.classList.add('fade-in');
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function closeModal() {
+        if (modal) {
+            modal.classList.add('fade-out');
+            modal.classList.remove('fade-in');
+
+            // Use 'animationend' event for a more robust close
+            modal.addEventListener('animationend', function handler() {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+                // Remove the event listener to prevent it from firing multiple times
+                modal.removeEventListener('animationend', handler);
+            }, { once: true }); // { once: true } is a modern shorthand
+        }
+    }
+
+    modalTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-                // Close mobile menu if open
-                navLinks.classList.remove('active');
-                mobileMenuToggle.classList.remove('active');
-            }
+            openModal();
         });
     });
 
-    // Book a Tour button functionality
-    const bookTourButtons = document.querySelectorAll('.btn-primary');
-    bookTourButtons.forEach(button => {
-        if (button.textContent.includes('Book a Tour')) {
-            button.addEventListener('click', function() {
-                // Replace with actual booking functionality
-                alert('Thank you for your interest! Please call +61 (02) 8273 2300 to book your tour or visit our contact section.');
-            });
+    if (closeButton) {
+        closeButton.addEventListener('click', closeModal);
+    }
+
+    // Close modal by clicking the background overlay
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            closeModal();
         }
     });
 
-    // Enquire Now button functionality
-    const enquireButtons = document.querySelectorAll('.btn-secondary');
-    enquireButtons.forEach(button => {
-        if (button.textContent.includes('Enquire Now')) {
-            button.addEventListener('click', function() {
-                // Replace with actual enquiry functionality
-                alert('Thank you for your interest! Please call +61 (02) 8273 2300 or email reception@raca.com.au for more information.');
-            });
+    // Close modal with the Escape key
+    window.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && modal && modal.style.display === 'flex') {
+            closeModal(); // This now correctly calls the closeModal function with the fade-out animation
         }
     });
-
-    // Header background change on scroll
-    const header = document.querySelector('.header');
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
-            header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
-            header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-        } else {
-            header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-            header.style.boxShadow = 'none';
-        }
-    });
-
-    // Intersection Observer for animations
+    
+    // Intersection Observer for fade-in animations on scroll
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
 
-    const observer = new IntersectionObserver(function(entries) {
+    const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Observe sections for fade-in animation
-    document.querySelectorAll('.benefit-card, .event-card, .feature, .gallery-item').forEach(el => {
+    // Apply observer to various elements
+    document.querySelectorAll('.benefit-card, .event-card, .feature, .gallery-item, .director-card').forEach(el => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         observer.observe(el);
     });
 
-    // Add keyboard navigation for gallery items
-    document.querySelectorAll('.gallery-item').forEach(item => {
-        item.setAttribute('tabindex', '0');
-        item.setAttribute('role', 'button');
-        item.setAttribute('aria-label', 'View gallery image details');
-        
-        item.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                // Trigger hover effect on keyboard activation
-                this.classList.toggle('keyboard-active');
-            }
-        });
+    // Custom video controls for the gallery page
+    document.querySelectorAll('.video-item').forEach(item => {
+        const video = item.querySelector('video');
+        if (video) {
+            // Ensure default controls are off
+            video.removeAttribute('controls');
+
+            // Play/pause on click of the container
+            item.addEventListener('click', () => {
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        }
     });
     
-    // Mobile-specific optimizations
-    if ('ontouchstart' in window) {
-        // Add touch feedback for mobile devices
-        document.querySelectorAll('.btn-primary, .btn-secondary').forEach(button => {
-            button.addEventListener('touchstart', function() {
-                this.style.opacity = '0.8';
+    // Reciprocal Clubs Accordion (from original file, kept for compatibility)
+    // Note: The main logic for this is now in reciprocal-clubs.html to handle dynamic content
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    accordionItems.forEach(item => {
+        const header = item.querySelector('.accordion-header');
+        const panel = item.querySelector('.accordion-panel');
+
+        if(header && panel && !header.closest('#club-accordion')) { // Prevents double-binding on clubs page
+            header.addEventListener('click', () => {
+                const isActive = item.classList.toggle('active');
+                if (isActive) {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                    panel.style.padding = "1rem 2rem 2rem";
+                } else {
+                    panel.style.maxHeight = 0;
+                    panel.style.padding = "0 2rem";
+                }
             });
-            
-            button.addEventListener('touchend', function() {
-                this.style.opacity = '';
-            });
-        });
-        
-        // Prevent double-tap zoom on buttons
-        document.querySelectorAll('button').forEach(button => {
-            button.addEventListener('touchend', function(e) {
-                e.preventDefault();
-                this.click();
-            });
-        });
-    }
-    
-    // Optimize images for mobile
-    function optimizeImagesForMobile() {
-        const images = document.querySelectorAll('img');
-        images.forEach(img => {
-            if (!img.complete) {
-                img.addEventListener('load', function() {
-                    this.style.opacity = '1';
-                });
-                img.style.opacity = '0';
-                img.style.transition = 'opacity 0.3s ease';
-            }
-        });
-    }
-    
-    optimizeImagesForMobile();
+        }
+    });
 });
-
-// Contact form functionality
-function handleContactForm(event) {
-    event.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(event.target);
-    const firstName = formData.get('firstName').trim();
-    const lastName = formData.get('lastName').trim();
-    const email = formData.get('email').trim();
-    const subject = formData.get('subject');
-    const message = formData.get('message').trim();
-    
-    // Clear previous error states
-    document.querySelectorAll('.form-group input, .form-group select, .form-group textarea').forEach(field => {
-        field.style.borderColor = '#e2e8f0';
-    });
-    
-    // Validation
-    const errors = [];
-    
-    if (!firstName) {
-        errors.push('First name is required');
-        document.getElementById('firstName').style.borderColor = '#e53e3e';
-    }
-    
-    if (!lastName) {
-        errors.push('Last name is required');
-        document.getElementById('lastName').style.borderColor = '#e53e3e';
-    }
-    
-    if (!email) {
-        errors.push('Email is required');
-        document.getElementById('email').style.borderColor = '#e53e3e';
-    } else if (!isValidEmail(email)) {
-        errors.push('Please enter a valid email address');
-        document.getElementById('email').style.borderColor = '#e53e3e';
-    }
-    
-    if (!subject) {
-        errors.push('Subject is required');
-        document.getElementById('subject').style.borderColor = '#e53e3e';
-    }
-    
-    if (!message) {
-        errors.push('Message is required');
-        document.getElementById('message').style.borderColor = '#e53e3e';
-    }
-    
-    if (errors.length > 0) {
-        alert('Please correct the following errors:\n• ' + errors.join('\n• '));
-        return;
-    }
-    
-    // Show success message
-    alert(`Thank you ${firstName}! Your message has been received. We will contact you at ${email} within 24 hours.`);
-    
-    // Reset form
-    event.target.reset();
-    
-    // In a real implementation, you would send this data to your server
-    console.log('Contact form submitted:', Object.fromEntries(formData));
-}
-
-// Email validation helper
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
-
-// Newsletter subscription (if needed)
-function handleNewsletterSignup(email) {
-    // Add newsletter signup logic here
-    alert('Thank you for subscribing to our newsletter!');
-}

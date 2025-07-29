@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Royal Automobile Club of Australia</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="attached_assets/Screenshot%202025-06-29%20at%206.44.00%E2%80%AFPM.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="attached_assets/Screenshot%202025-06-29%20at%206.44.00%E2%80%AFPM.png">
+    <link rel="manifest" href="images/site.webmanifest">
+
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'qpc0ear',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+    <style>
+        /* Small helper style to make sure the div inside the <a> takes up full space */
+        .gallery-item div:first-of-type {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative; /* Needed for the overlay */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-left">
+                <a href="https://members.raca.com.au/web/pages/login" class="btn-login">Member Login</a>
+                <div class="nav-brand">
+                    <a href="index.html"><img src="attached_assets/company_logo_1750914470639.png" alt="RACA Logo" class="logo"></a>
+                </div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="board-of-directors.html">Our Board</a>
+                <a href="index.html#events">Events</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="reciprocal-clubs.html">Reciprocal Clubs</a>
+                <a href="index.html#contact">Contact</a>
+                <button class="btn-primary modal-trigger">Book a Tour</button>
+                <a href="https://membership.raca.com.au/" target="_blank" class="btn-primary">Join Now</a>
+                <a href="https://members.raca.com.au/web/pages/login" class="btn-login">Member Login</a>
+            </div>
+
+            <div class="mobile-menu-toggle" role="button" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="gallery-main">
+        <section class="gallery-hero">
+            <div class="container">
+                <span class="frame-top-left"></span>
+                <span class="frame-top-right"></span>
+                <h1>Club Moments</h1>
+                <p>A curated collection of our celebrated events, stunning interiors, and the vibrant life of our members.</p>
+            </div>
+        </section>
+
+        <section class="gallery-grid-section">
+            <div class="gallery-grid">
+                
+                <a href="images/DSC_1583.jpg" data-fancybox="gallery" data-caption="Elegant Evenings" class="gallery-item item-large">
+                    <div style="background-image: url('images/DSC_1583.jpg');">
+                        <div class="gallery-overlay"><h3>Elegant Evenings</h3><p>Where every event is a memorable occasion.</p></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1633.jpg" data-fancybox="gallery" data-caption="Social Gatherings" class="gallery-item item-wide">
+                    <div style="background-image: url('images/DSC_1633.jpg');">
+                        <div class="gallery-overlay"><h3>Social Gatherings</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1708.jpg" data-fancybox="gallery" data-caption="Automotive Heritage" class="gallery-item item-tall">
+                    <div style="background-image: url('images/DSC_1708.jpg');">
+                        <div class="gallery-overlay"><h3>Automotive Heritage</h3></div>
+                    </div>
+                </a>
+                 <a href="images/DSC_1410.jpg" data-fancybox="gallery" data-caption="Exquisite Dining" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1410.jpg');">
+                        <div class="gallery-overlay"><h3>Exquisite Dining</h3></div>
+                    </div>
+                </a>
+                <a href="attached_assets/pexels-pat-saengcharoen-774865114-31726430.jpg" data-fancybox="gallery" data-caption="Iconic Harbour Views" class="gallery-item item-wide">
+                    <div style="background-image: url('attached_assets/pexels-pat-saengcharoen-774865114-31726430.jpg');">
+                        <div class="gallery-overlay"><h3>Iconic Harbour Views</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1461.jpg" data-fancybox="gallery" data-caption="Vibrant Community" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1461.jpg');">
+                        <div class="gallery-overlay"><h3>Vibrant Community</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1618.jpg" data-fancybox="gallery" data-caption="The Club Bar" class="gallery-item item-tall">
+                    <div style="background-image: url('images/DSC_1618.jpg');">
+                        <div class="gallery-overlay"><h3>The Club Bar</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1548.jpg" data-fancybox="gallery" data-caption="Gourmet Plates" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1548.jpg');">
+                        <div class="gallery-overlay"><h3>Gourmet Plates</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1662.jpg" data-fancybox="gallery" data-caption="A Toast to Tradition" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1662.jpg');">
+                        <div class="gallery-overlay"><h3>A Toast to Tradition</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1404.jpg" data-fancybox="gallery" data-caption="Exclusive Tastings" class="gallery-item item-large">
+                    <div style="background-image: url('images/DSC_1404.jpg');">
+                        <div class="gallery-overlay"><h3>Exclusive Tastings</h3><p>Unforgettable member experiences.</p></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1694.jpg" data-fancybox="gallery" data-caption="Curated Details" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1694.jpg');">
+                        <div class="gallery-overlay"><h3>Curated Details</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1722.jpg" data-fancybox="gallery" data-caption="Macquarie Street Presence" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1722.jpg');">
+                        <div class="gallery-overlay"><h3>Our Home on Macquarie St</h3></div>
+                    </div>
+                </a>
+                 <a href="images/DSC_1523.jpg" data-fancybox="gallery" data-caption="Impeccable Service" class="gallery-item item-tall">
+                    <div style="background-image: url('images/DSC_1523.jpg');">
+                        <div class="gallery-overlay"><h3>Impeccable Service</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1653-Enhanced-NR.jpg" data-fancybox="gallery" data-caption="Moments of Connection" class="gallery-item item-wide">
+                    <div style="background-image: url('images/DSC_1653-Enhanced-NR.jpg');">
+                        <div class="gallery-overlay"><h3>Moments of Connection</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1307.jpg" data-fancybox="gallery" data-caption="Historic Artwork" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1307.jpg');">
+                        <div class="gallery-overlay"><h3>Historic Artwork</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1377.jpg" data-fancybox="gallery" data-caption="Artful Cuisine" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1377.jpg');">
+                        <div class="gallery-overlay"><h3>Artful Cuisine</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1642.jpg" data-fancybox="gallery" data-caption="A Warm Welcome" class="gallery-item item-wide">
+                    <div style="background-image: url('images/DSC_1642.jpg');">
+                        <div class="gallery-overlay"><h3>A Warm Welcome</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1505.jpg" data-fancybox="gallery" data-caption="Fine Details" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1505.jpg');">
+                        <div class="gallery-overlay"><h3>Fine Details</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1602.jpg" data-fancybox="gallery" data-caption="Member Networking" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1602.jpg');">
+                        <div class="gallery-overlay"><h3>Member Networking</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1662.jpg" data-fancybox="gallery" data-caption="Architectural Grandeur" class="gallery-item item-tall">
+                    <div style="background-image: url('images/DSC_1662.jpg');">
+                        <div class="gallery-overlay"><h3>Architectural Grandeur</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1487.jpg" data-fancybox="gallery" data-caption="A Perfect Pour" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1487.jpg');">
+                        <div class="gallery-overlay"><h3>A Perfect Pour</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1657.jpg" data-fancybox="gallery" data-caption="Club Interior" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1657.jpg');">
+                        <div class="gallery-overlay"><h3>Club Interior</h3></div>
+                    </div>
+                </a>
+                 <a href="images/DSC_1672-Enhanced-NR.jpg" data-fancybox="gallery" data-caption="An Evening at the Club" class="gallery-item item-large">
+                    <div style="background-image: url('images/DSC_1672-Enhanced-NR.jpg');">
+                        <div class="gallery-overlay"><h3>An Evening at the Club</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1430.jpg" data-fancybox="gallery" data-caption="Culinary Delights" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1430.jpg');">
+                        <div class="gallery-overlay"><h3>Culinary Delights</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1704.jpg" data-fancybox="gallery" data-caption="Celebrating with Wine" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1704.jpg');">
+                        <div class="gallery-overlay"><h3>Celebrating with Wine</h3></div>
+                    </div>
+                </a>
+                 <a href="images/DSC_1625.jpg" data-fancybox="gallery" data-caption="Lively Conversations" class="gallery-item item-wide">
+                    <div style="background-image: url('images/DSC_1625.jpg');">
+                        <div class="gallery-overlay"><h3>Lively Conversations</h3></div>
+                    </div>
+                </a>
+                 <a href="images/DSC_1497.jpg" data-fancybox="gallery" data-caption="Distinguished Atmosphere" class="gallery-item item-wide">
+                    <div style="background-image: url('images/DSC_1497.jpg');">
+                        <div class="gallery-overlay"><h3>Distinguished Atmosphere</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1659.jpg" data-fancybox="gallery" data-caption="Evening Ambiance" class="gallery-item item-tall">
+                    <div style="background-image: url('images/DSC_1659.jpg');">
+                        <div class="gallery-overlay"><h3>Evening Ambiance</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1334.jpg" data-fancybox="gallery" data-caption="Timeless Elegance" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1334.jpg');">
+                        <div class="gallery-overlay"><h3>Timeless Elegance</h3></div>
+                    </div>
+                </a>
+                 <a href="images/DSC_1537.jpg" data-fancybox="gallery" data-caption="Plated Perfection" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1537.jpg');">
+                        <div class="gallery-overlay"><h3>Plated Perfection</h3></div>
+                    </div>
+                </a>
+                 <a href="images/DSC_1646-Enhanced-NR.jpg" data-fancybox="gallery" data-caption="Member's Lounge" class="gallery-item item-large">
+                    <div style="background-image: url('images/DSC_1646-Enhanced-NR.jpg');">
+                        <div class="gallery-overlay"><h3>Member's Lounge</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1389.jpg" data-fancybox="gallery" data-caption="A Culinary Journey" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1389.jpg');">
+                        <div class="gallery-overlay"><h3>A Culinary Journey</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1311.jpg" data-fancybox="gallery" data-caption="Harbour Views" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1311.jpg');">
+                        <div class="gallery-overlay"><h3>Harbour Views</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1700.jpg" data-fancybox="gallery" data-caption="Automotive Passion" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1700.jpg');">
+                        <div class="gallery-overlay"><h3>Automotive Passion</h3></div>
+                    </div>
+                </a>
+                 <a href="images/DSC_1595.jpg" data-fancybox="gallery" data-caption="Connections and Conversations" class="gallery-item item-wide">
+                    <div style="background-image: url('images/DSC_1595.jpg');">
+                        <div class="gallery-overlay"><h3>Connections & Conversations</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1354.jpg" data-fancybox="gallery" data-caption="Club Dining Room" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1354.jpg');">
+                        <div class="gallery-overlay"><h3>Club Dining Room</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1553.jpg" data-fancybox="gallery" data-caption="Prepared with Care" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1553.jpg');">
+                        <div class="gallery-overlay"><h3>Prepared with Care</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1692.jpg" data-fancybox="gallery" data-caption="Social Events" class="gallery-item item-tall">
+                    <div style="background-image: url('images/DSC_1692.jpg');">
+                        <div class="gallery-overlay"><h3>Social Events</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1395.jpg" data-fancybox="gallery" data-caption="A Moment in Time" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1395.jpg');">
+                        <div class="gallery-overlay"><h3>A Moment in Time</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1677.jpg" data-fancybox="gallery" data-caption="The Reading Room" class="gallery-item item-large">
+                    <div style="background-image: url('images/DSC_1677.jpg');">
+                        <div class="gallery-overlay"><h3>The Reading Room</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1396.jpg" data-fancybox="gallery" data-caption="Chef's Table" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1396.jpg');">
+                        <div class="gallery-overlay"><h3>Chef's Table</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1674.jpg" data-fancybox="gallery" data-caption="Evening Gatherings" class="gallery-item item-wide">
+                    <div style="background-image: url('images/DSC_1674.jpg');">
+                        <div class="gallery-overlay"><h3>Evening Gatherings</h3></div>
+                    </div>
+                </a>
+                 <a href="images/DSC_1713.jpg" data-fancybox="gallery" data-caption="Our Motoring Roots" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1713.jpg');">
+                        <div class="gallery-overlay"><h3>Our Motoring Roots</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1417.jpg" data-fancybox="gallery" data-caption="Fine Dining Experience" class="gallery-item item-tall">
+                    <div style="background-image: url('images/DSC_1417.jpg');">
+                        <div class="gallery-overlay"><h3>Fine Dining Experience</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1521.jpg" data-fancybox="gallery" data-caption="Dessert Perfection" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1521.jpg');">
+                        <div class="gallery-overlay"><h3>Dessert Perfection</h3></div>
+                    </div>
+                </a>
+                 <a href="images/DSC_1631.jpg" data-fancybox="gallery" data-caption="Community" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1631.jpg');">
+                        <div class="gallery-overlay"><h3>Community</h3></div>
+                    </div>
+                </a>
+                <a href="images/DSC_1587.jpg" data-fancybox="gallery" data-caption="Special Occasions" class="gallery-item item-wide">
+                    <div style="background-image: url('images/DSC_1587.jpg');">
+                        <div class="gallery-overlay"><h3>Special Occasions</h3></div>
+                    </div>
+                </a>
+                 <a href="images/DSC_1628.jpg" data-fancybox="gallery" data-caption="A Glass of White" class="gallery-item">
+                    <div style="background-image: url('images/DSC_1628.jpg');">
+                        <div class="gallery-overlay"><h3>A Glass of White</h3></div>
+                    </div>
+                </a>
+                 <a href="images/gray.jpg" data-fancybox="gallery" data-caption="Grand Interiors" class="gallery-item item-large">
+                    <div style="background-image: url('images/gray.jpg');">
+                        <div class="gallery-overlay"><h3>Grand Interiors</h3></div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+<footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-section-brand">
+                    <img src="attached_assets/company_logo_1750914470639.png" alt="RACA Logo" class="footer-logo">
+                    <p>The Club's location offers members spectacular views over Sydney Harbour and is just a short walk from the iconic Sydney Opera House.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/RACAustralia" target="_blank" class="social-icon" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg>
+                        </a>
+                        <a href="https://au.linkedin.com/company/royal-automobile-club-of-australia" target="_blank" class="social-icon" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.302 0-1.853.727-2.169 1.216h.015V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/racaustralia/" target="_blank" class="social-icon" aria-label="Instagram">
+                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.2,5.2 0,0 1,16.2 22H7.8A5.2,5.2 0,0 1,2 16.2V7.8A5.2,5.2 0,0 1,7.8 2M7.6,4A3.6,3.6 0,0 0,4 7.6V16.4A3.6,3.6 0,0 0,7.6 20H16.4A3.6,3.6 0,0 0,20 16.4V7.6A3.6,3.6 0,0 0,16.4 4H7.6M12,7A5,5 0,1 1,7 12A5,5 0,0 1,12 7M12,9A3,3 0,1 0,15 12A3,3 0,0 0,12 9M16.8,4.2A1.2,1.2 0,1 1,15.6 5.4A1.2,1.2 0,0 1,16.8 4.2Z" /></svg>
+                        </a>
+                    </div>
+                    <div class="footer-buttons">
+                        <a href="Privacy%20Policy%20of%20The%20RACA%20(1).pdf" class="btn-footer" target="_blank">Privacy Policy</a>
+                        <a href="Club%20Policy30.04.2025-2.pdf" class="btn-footer" target="_blank">Club Guidelines</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="board-of-directors.html">Our Board</a></li>
+                        <li><a href="index.html#events">Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="reciprocal-clubs.html">Reciprocal Clubs</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="https://members.raca.com.au/web/pages/login">Member Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>89 Macquarie Street,<br>Sydney NSW 2000,<br>Australia</p>
+                    <p>Phone: +61 (02) 8273 2300</p>
+                    <p>Email: reception@raca.com.au</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Open Hours</h4>
+                    <p>Club Reception is accessible 24 hours,<br>7 days a week.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Royal Automobile Club of Australia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-info-panel">
+                <div class="modal-header">
+                    <h2>Book a<br>Club Tour</h2>
+                    <p>We're ready to show you around. Fill out the form and we'll be in touch to arrange your private tour.</p>
+                </div>
+                <div class="modal-contact-info">
+                    <div class="modal-contact-item">
+                        <h3>Address</h3>
+                        <p>89 Macquarie Street<br>Sydney NSW 2000, Australia</p>
+                    </div>
+                    <div class="modal-contact-item">
+                        <h3>Contact</h3>
+                        <p>+61 (02) 8273 2300<br>reception@raca.com.au</p>
+                    </div>
+                    <div class="modal-contact-item">
+                        <h3>Hours</h3>
+                        <p>Club Reception is accessible 24 hours, 7 days a week.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-form-panel modal-contact-form">
+                 <div class="modal-header">
+                    <h2>Book a Club Tour</h2>
+                    <p>We're ready to show you around. Fill out the form and we'll be in touch to arrange your private tour.</p>
+                </div>
+                <form id="modalContactForm" action="https://formsubmit.co/reception@raca.com.au" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="modalFirstName">First Name *</label>
+                            <input type="text" id="modalFirstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="modalLastName">Last Name *</label>
+                            <input type="text" id="modalLastName" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="modalEmail">Email *</label>
+                        <input type="email" id="modalEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="modalMessage">Message *</label>
+                        <textarea id="modalMessage" name="message" rows="5" required placeholder="Let us know your preferred tour times or any questions you have..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary btn-large">Request Tour</button>
+
+                    <input type="hidden" name="_next" value="thank-you.html">
+                    <input type="hidden" name="_subject" value="New Tour Request from RACA Website (Modal)">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+</body>
+</html>
