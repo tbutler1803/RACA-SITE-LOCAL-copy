@@ -278,7 +278,7 @@ h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
 
-.modal-content { background-color: var(--secondary-color); color: var(--text-color); border: 2px solid var(--primary-color); width: 100%; max-width: 900px; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.5); display: flex; flex-direction: column; max-height: 90vh; border-radius: 4px; overflow: hidden; }
+.modal-content { background-color: var(--secondary-color); color: var(--text-color); border: 2px solid var(--primary-color); width: 100%; max-width: 900px; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.5); display: flex; flex-direction: column; max-height: 90vh; border-radius: 4px; }
 .modal.fade-in .modal-content { animation: slideIn 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
 .modal.fade-out .modal-content { animation: slideOut 0.4s cubic-bezier(0.5, 0, 0.75, 0) forwards; }
 @keyframes slideIn { from { transform: translateY(50px) scale(0.95); opacity: 0; } to { transform: translateY(0) scale(1); opacity: 1; } }
@@ -403,7 +403,7 @@ h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
     .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
     .nav .nav-links { display: none; }
     .mobile-menu-toggle { display: flex; }
-    .nav-links.active { display: flex; flex-direction: column; align-items: center; position: fixed; top: 113px; left: 0; width: 100%; height: calc(100vh - 113px); background-color: var(--secondary-color); padding: 2rem 0; gap: 0; overflow-y: auto; }
+    .nav-links.active { display: flex; flex-direction: column; align-items: center; position: fixed; top: 113px; left: 0; width: 100%; height: calc(100vh - 113px); background-color: var(--secondary-color); padding: 2rem 0; gap: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; }
     .nav-links.active a, .nav-links.active .btn-primary { width: 100%; text-align: center; padding: 1.2rem 1rem; border-bottom: 1px solid var(--border-color); }
     .nav-links.active a:first-child { border-top: 1px solid var(--border-color); }
     .nav-links.active .btn-primary { margin-top: 1rem; border: 2px solid var(--accent-red); width: calc(100% - 4rem); max-width: 400px; }
