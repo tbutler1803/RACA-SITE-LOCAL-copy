@@ -370,7 +370,7 @@ h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
    ========================================================================== */
 
 /* Laptop & Desktop (Large Screens) */
-@media (min-width: 1025px) {
+@media (min-width: 1301px) {
     .modal-content {
         flex-direction: row;
     }
@@ -390,8 +390,8 @@ h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
     }
 }
 
-/* Tablet & Smaller Laptops */
-@media (max-width: 1024px) {
+/* Tablet & Smaller Screens */
+@media (max-width: 1300px) {
     .nav-left .btn-login {
         display: none;
     }
@@ -459,7 +459,6 @@ h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
     .modal-form-panel, .modal-info-panel { padding: 1.5rem; }
 
     /* --- MOBILE: BENEFITS GRID & CARD STYLES --- */
-    /* FIX: Change to flexbox for proper centering of the last item */
     .benefits-grid {
         display: flex;
         flex-wrap: wrap;
@@ -467,7 +466,7 @@ h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
         gap: 1rem;
     }
     .benefit-card {
-        flex: 0 0 calc(50% - 0.5rem); /* Set width for two columns */
+        flex: 0 0 calc(50% - 0.5rem);
     }
     .benefit-card-img {
         height: 120px;
@@ -527,14 +526,11 @@ h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
 
 /* Final mobile-only adjustments for the contact section */
 @media (max-width: 767px) {
-    /* Create a 2x2 grid for the contact details */
     .contact-info {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
     }
-
-    /* Center the 'Send Message' button in the form */
     .contact-form-wrapper .btn-primary {
         display: flex;
         margin-left: auto;
