@@ -434,9 +434,6 @@ h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
     .nav { height: 105px; }
     section[id] { scroll-margin-top: 105px; }
 
-    .benefits-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-    .benefit-card-content h3 { min-height: auto; }
-
     .footer-section h4 { margin-top: 1rem; }
     .gallery-hero, .reciprocal-hero, .board-hero { padding: 4rem 1rem; }
     .contact-grid { gap: 2rem; }
@@ -445,6 +442,43 @@ h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
 
     .modal-content { max-height: 95dvh; margin: 1rem; }
     .modal-form-panel, .modal-info-panel { padding: 1.5rem; }
+
+    /* --- NEW: BENEFITS GRID & CARD STYLES FOR MOBILE --- */
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr); /* Force two columns */
+        gap: 1rem; /* Reduce the gap between cards */
+    }
+    .benefit-card-img {
+        height: 120px; /* Adjust image height for smaller cards */
+    }
+    .benefit-card-content {
+        padding: 1rem; /* Reduce padding to give text more space */
+    }
+    .benefit-card-content h3 {
+        font-size: 1rem; /* Reduce heading size */
+        min-height: 0; /* Remove minimum height */
+        margin-bottom: 0.5rem;
+    }
+    .benefit-card-content p {
+        font-size: 0.85rem; /* Reduce paragraph size */
+        line-height: 1.4;
+    }
+
+    /* --- NEW: EVENT GRID STYLES FOR MOBILE --- */
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr); /* Force two columns */
+        gap: 1rem; /* Reduce the gap between cards */
+    }
+    .event-card {
+        padding: 1rem; /* Reduce padding inside the card */
+    }
+    .event-card h3 {
+        font-size: 1.2rem; /* Reduce heading font size */
+        line-height: 1.3; /* Adjust line height for better text wrapping */
+    }
+    .event-card .event-date {
+        font-size: 0.9rem; /* Reduce date font size */
+    }
 }
 
 @media (max-width: 480px) {
@@ -461,5 +495,5 @@ h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
     .gallery-overlay h3 { font-size: 1rem; }
     .section-header, .gallery-hero, .reciprocal-hero, .board-hero { padding-left: 1rem; padding-right: 1rem; }
 
-    .benefits-grid { grid-template-columns: 1fr; }
+    /* NOTE: The rule that previously forced the benefits-grid to a single column has been removed */
 }
