@@ -79,7 +79,7 @@ h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 1rem; color: var(--prim
 h2 { font-size: 2.8rem; margin-bottom: 1rem; color: var(--primary-color); font-weight: 400; }
 h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
 
-.btn-primary, .btn-secondary { padding: 12px 28px; border: 2px solid var(--primary-color); border-radius: 0; font-weight: 400; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s ease; cursor: pointer; font-size: 1rem; text-align: center; }
+.btn-primary, .btn-secondary { padding: 12px 28px; border: 2px solid var(--primary-color); border-radius: 0; font-weight: 400; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s ease; cursor: pointer; font-size: 1rem; text-align: center; line-height: 1.2; }
 
 .btn-primary {
     background-color: var(--accent-color);
@@ -138,7 +138,12 @@ h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
 .nav-links a { text-decoration: none; color: var(--text-color); font-weight: 400; transition: color 0.3s ease; position: relative; padding-bottom: 4px; }
 .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background-color: var(--primary-color); transition: width 0.3s ease; }
 .nav-links a:hover::after { width: 100%; }
-.nav-links a:hover { color: var(--primary-color); }
+
+/* FIX: Apply gold hover color to both links and buttons in the nav */
+.nav-links a:hover, .nav-links button:hover { 
+    color: var(--primary-color); 
+}
+
 .btn-login:hover {
     background-color: var(--primary-color);
     color: var(--secondary-color);
