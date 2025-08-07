@@ -194,8 +194,27 @@ h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
 .feature h4 { color: var(--text-color-dark); margin-bottom: 0.5rem; }
 
 .benefits { padding: 6rem 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
-.benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
-.benefit-card { background: #091a42; border: 1px solid var(--border-color); text-align: center; transition: all 0.4s ease; position: relative; display: flex; flex-direction: column; overflow: hidden; }
+/* MODIFICATION START: Switched to flexbox for easier centering of the last row */
+.benefits-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* This is the key change to center the cards */
+    gap: 2rem;
+}
+.benefit-card {
+    background: #091a42;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* Set a flex-basis to control the width and allow wrapping */
+    flex: 1 1 320px;
+    max-width: 380px; /* A reasonable max-width to maintain 3 columns on large screens */
+}
+/* MODIFICATION END */
 .benefit-card:hover { transform: translateY(-8px); border-color: var(--primary-color); box-shadow: 0 15px 30px rgba(0,0,0,0.3); }
 .benefit-card-img { width: 100%; height: 200px; object-fit: cover; }
 .benefit-card-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-start; text-align: center; }
@@ -243,6 +262,56 @@ h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
 .cta .btn-primary:hover { background-color: #091a42; color: var(--text-color); border-color: #091a42; }
 .cta .btn-secondary { color: var(--secondary-color); border-color: var(--secondary-color); }
 .cta .btn-secondary:hover { background-color: #DB150D; border-color: #DB150D; color: var(--text-color); }
+
+/* ==========================================================================
+   Testimonial Section
+   ========================================================================== */
+.testimonial {
+    padding: 6rem 0;
+    background-color: var(--background-dark-blue);
+    color: var(--text-color);
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+.testimonial-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding: 2rem;
+}
+
+.testimonial-content::before,
+.testimonial-content::after {
+    content: '“';
+    font-family: var(--font-heading);
+    font-size: 6rem;
+    color: var(--primary-color); /* This is your --accent-gold-light color */
+    opacity: 1; /* Increased from 0.1 to make the gold color more visible */
+    position: absolute;
+    line-height: 1;
+}
+
+.testimonial-content::before {
+    top: -1rem;
+    left: 0rem;
+}
+
+.testimonial-content::after {
+    content: '”';
+    bottom: -3rem;
+    right: 0rem;
+}
+
+.testimonial p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--text-color);
+    opacity: 0.9;
+    margin: 0;
+}
 
 /* ==========================================================================
    Art Deco Flourishes & Dividers
@@ -444,7 +513,7 @@ h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
     h2 { 
         font-size: 2.5rem; 
     }
-    .about, .benefits, .events, .contact, .cta {
+    .about, .benefits, .events, .contact, .cta, .testimonial {
         padding: 4rem 0;
     }
     
@@ -522,22 +591,8 @@ h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
     .gallery-overlay { padding: 1rem; }
     .gallery-overlay h3 { font-size: 1rem; }
     .section-header, .gallery-hero, .reciprocal-hero, .board-hero { padding-left: 1rem; padding-right: 1rem; }
-}
-
-/* Center the last card in 2-column layouts (medium screens) */
-@media (min-width: 768px) and (max-width: 1023px) {
-    .benefits-grid .benefit-card:last-child:nth-child(odd) {
-        grid-column: 1 / -1;
-        justify-self: center;
-        max-width: 380px;
-    }
-}
-
-/* Center the last card in 3-column layouts (large screens) */
-@media (min-width: 1024px) {
-    .benefits-grid .benefit-card:last-child:nth-child(3n + 1) {
-        grid-column-start: 2;
-    }
+    .testimonial p { font-size: 1.1rem; }
+    .testimonial-content { padding: 1rem; }
 }
 
 /* MODIFICATION START: Changed max-width to apply 2x2 grid to medium screens */
